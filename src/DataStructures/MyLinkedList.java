@@ -23,8 +23,10 @@ public class MyLinkedList {
 		public void setNext(Node next) {
 			this.next = next;
 		}
-		
-		
+
+		public void setData(int data) {
+			this.data = data;
+		}
 
 	}
 
