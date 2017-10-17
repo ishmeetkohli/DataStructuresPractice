@@ -34,7 +34,16 @@ public class MyLinkedList {
 		return head;
 	}
 
-	void insert(int data) {
+	public void setHead(Node head) {
+		this.head = head;
+	}
+
+	public void insert(int data) {
+		if (this.head == null) {
+			this.head = new Node(data);
+			return;
+		}
+
 		Node current = this.head;
 		while (current.next != null) {
 			current = current.next;
@@ -42,7 +51,7 @@ public class MyLinkedList {
 		current.next = new Node(data);
 	}
 
-	void delete(int data) {
+	public void delete(int data) {
 		if (this.head.data == data) {
 			this.head = this.head.next;
 		}
@@ -53,6 +62,14 @@ public class MyLinkedList {
 				current.next = current.next.next;
 			}
 			current = current.next;
+		}
+	}
+
+	public void print() {
+		Node current = head;
+		while (current != null) {
+			System.out.println(current.data);
+			current = current.next();
 		}
 	}
 }

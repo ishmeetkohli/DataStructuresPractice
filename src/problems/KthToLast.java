@@ -5,7 +5,7 @@ import DataStructures.MyLinkedList.Node;
 
 public class KthToLast {
 
-	Node getKthToLast(MyLinkedList linkedList, int k) {
+	public Node getKthToLast(MyLinkedList linkedList, int k) {
 		Node runner1 = linkedList.head();
 		Node runner2 = linkedList.head();
 
