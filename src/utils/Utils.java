@@ -1,5 +1,7 @@
 package utils;
 
+import DataStructures.BinaryNode;
+
 public class Utils {
 	public static void printMatrix(int[][] matrix) {
 		int M = matrix.length;
@@ -9,6 +11,20 @@ public class Utils {
 				System.out.print(matrix[i][j] + "\t");
 			}
 			System.out.print("\n");
+		}
+	}
+
+	public static final String SPACE = "    ";
+
+	public static void printBinaryTree(BinaryNode node, String prefix, String childPrefix) {
+		System.out.println(prefix + "└─" + childPrefix + " " + node.getData());
+
+		if (node.getLeft() != null) {
+			printBinaryTree(node.getLeft(), prefix + SPACE, "L");
+		}
+
+		if (node.getRight() != null) {
+			printBinaryTree(node.getRight(), prefix + SPACE, "R");
 		}
 	}
 }

@@ -1,13 +1,13 @@
 package problems;
 
 import DataStructures.MyLinkedList;
-import DataStructures.MyLinkedList.Node;
+import DataStructures.LinkedListNode;
 
 public class PartitionLinkedList {
 
-	public Node partition(MyLinkedList linkedList, int x) {
-		Node current = linkedList.head();
-		Node left = null, right = null, leftHead = null, rightHead = null;
+	public LinkedListNode partition(MyLinkedList linkedList, int x) {
+		LinkedListNode current = linkedList.head();
+		LinkedListNode left = null, right = null, leftHead = null, rightHead = null;
 
 		while (current != null) {
 			if (current.data() < x) {

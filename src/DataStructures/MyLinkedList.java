@@ -1,54 +1,34 @@
 package DataStructures;
 
 public class MyLinkedList {
-	Node head;
+	LinkedListNode head;
 
-	public class Node {
-		int data;
-		Node next;
-
-		public Node(int data) {
-			this.data = data;
-			this.next = null;
-		}
-
-		public int data() {
-			return data;
-		}
-
-		public Node next() {
-			return next;
-		}
-
-		public void setNext(Node next) {
-			this.next = next;
-		}
-
-		public void setData(int data) {
-			this.data = data;
-		}
-
+	public MyLinkedList() {
 	}
 
-	public Node head() {
+	public MyLinkedList(LinkedListNode head) {
+		this.head = head;
+	}
+
+	public LinkedListNode head() {
 		return head;
 	}
 
-	public void setHead(Node head) {
+	public void setHead(LinkedListNode head) {
 		this.head = head;
 	}
 
 	public void insert(int data) {
 		if (this.head == null) {
-			this.head = new Node(data);
+			this.head = new LinkedListNode(data);
 			return;
 		}
 
-		Node current = this.head;
+		LinkedListNode current = this.head;
 		while (current.next != null) {
 			current = current.next;
 		}
-		current.next = new Node(data);
+		current.next = new LinkedListNode(data);
 	}
 
 	public void delete(int data) {
@@ -56,7 +36,7 @@ public class MyLinkedList {
 			this.head = this.head.next;
 		}
 
-		Node current = this.head;
+		LinkedListNode current = this.head;
 		while (current.next != null) {
 			if (current.next.data == data) {
 				current.next = current.next.next;
@@ -66,7 +46,7 @@ public class MyLinkedList {
 	}
 
 	public void print() {
-		Node current = head;
+		LinkedListNode current = head;
 		while (current != null) {
 			System.out.println(current.data);
 			current = current.next();

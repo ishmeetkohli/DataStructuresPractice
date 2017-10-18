@@ -1,16 +1,16 @@
 package problems;
 
 import DataStructures.MyLinkedList;
-import DataStructures.MyLinkedList.Node;
+import DataStructures.LinkedListNode;
 
 public class DeleteMiddleNode {
 
-	boolean deleteMiddleNode(MyLinkedList linkedList, Node node) {
+	boolean deleteMiddleNode(MyLinkedList linkedList, LinkedListNode linkedListNode) {
 		if (linkedList.head() == null || linkedList.head().next() == null) {
 			return false;
 		}
-		node.setData(node.next().data());
-		node.setNext(node.next().next());
+		linkedListNode.setData(linkedListNode.next().data());
+		linkedListNode.setNext(linkedListNode.next().next());
 		return true;
 	}
 }
