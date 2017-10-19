@@ -23,5 +23,7 @@ public class MinimalTree {
 		node.setRight(rightNode);
 		return node;
 	}
+	
+	
 
 }

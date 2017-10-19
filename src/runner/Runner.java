@@ -1,7 +1,13 @@
 package runner;
 
+import java.util.ArrayList;
+
 import DataStructures.BinaryNode;
+import DataStructures.MyLinkedList;
+import problems.CheckBalanced;
+import problems.ListOfDepths;
 import problems.MinimalTree;
+import problems.ValidateBST;
 import utils.Utils;
 
 public class Runner {
@@ -105,8 +111,7 @@ public class Runner {
 		// boolean result = routeBetweenNodes.routeExists(node0, node3);
 		// System.out.println(result);
 
-		
-//		Minimal Tree
+		// Minimal Tree
 		int n = 15;
 		int[] numberArray = new int[n];
 		for (int i = 0; i < n; i++) {
@@ -116,7 +121,50 @@ public class Runner {
 		MinimalTree minimalTree = new MinimalTree();
 		BinaryNode tree = minimalTree.createMinimalTree(numberArray);
 
-		Utils.printBinaryTree(tree, "", "─");
+		// Utils.printBinaryTree(tree, "", "─");
+
+		// Lists of depths
+
+		// ListOfDepths listOfDepths = new ListOfDepths();
+		// ArrayList<MyLinkedList> lists = listOfDepths.getListOfDepths(tree);
+		//
+		// for(MyLinkedList list : lists) {
+		// System.out.println();
+		// list.print();
+		// }
+
+		// Check Balanced
+		// CheckBalanced checkBalanced = new CheckBalanced();
+		//
+		// BinaryNode unbalancedTree = tree;
+		// while(tree.getRight() != null) {
+		// tree = tree.getRight();
+		// }
+		//
+		// tree.setRight(new BinaryNode(45));
+		// tree = tree.getRight();
+		// tree.setRight(new BinaryNode(55));
+		//
+		// Utils.printBinaryTree(unbalancedTree, "", "─");
+
+		// boolean result = checkBalanced.isBalanced(unbalancedTree);
+		// System.out.println(result);
+
+		// Validate BST
+		ValidateBST validateBST = new ValidateBST();
+		BinaryNode notABinarySearchTree = tree;
+		
+		while (tree.getRight() != null) {
+			tree = tree.getRight();
+		}
+		
+		tree.setLeft(new BinaryNode(13));
+//		tree = tree.getRight();
+//		tree.setRight(new BinaryNode(55));
+		
+		Utils.printBinaryTree(notABinarySearchTree, "", "─");
+		boolean result = validateBST.validate(notABinarySearchTree);
+		System.out.println(result);
 
 	}
 }

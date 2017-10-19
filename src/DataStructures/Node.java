@@ -4,6 +4,7 @@ import java.util.ArrayList;
 
 public class Node {
 	// String name;
+	//	int data;
 	Boolean visited;
 	ArrayList<Node> neighbours;
 
@@ -11,6 +12,11 @@ public class Node {
 		visited = false;
 		neighbours = new ArrayList<Node>();
 	}
+	
+//	public Node(int data) {
+//		visited = false;
+//		neighbours = new ArrayList<Node>();
+//	}
 
 	public ArrayList<Node> getNeighbours() {
 		return neighbours;
