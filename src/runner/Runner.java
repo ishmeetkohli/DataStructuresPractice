@@ -1,12 +1,9 @@
 package runner;
 
-import java.util.ArrayList;
-
 import DataStructures.BinaryNode;
-import DataStructures.MyLinkedList;
-import problems.CheckBalanced;
-import problems.ListOfDepths;
+import DataStructures.BinaryNodeWithParent;
 import problems.MinimalTree;
+import problems.Successor;
 import problems.ValidateBST;
 import utils.Utils;
 
@@ -118,8 +115,8 @@ public class Runner {
 			numberArray[i] = i;
 		}
 
-		MinimalTree minimalTree = new MinimalTree();
-		BinaryNode tree = minimalTree.createMinimalTree(numberArray);
+//		MinimalTree minimalTree = new MinimalTree();
+//		BinaryNode tree = minimalTree.createMinimalTree(numberArray);
 
 		// Utils.printBinaryTree(tree, "", "─");
 
@@ -150,21 +147,32 @@ public class Runner {
 		// boolean result = checkBalanced.isBalanced(unbalancedTree);
 		// System.out.println(result);
 
-		// Validate BST
-		ValidateBST validateBST = new ValidateBST();
-		BinaryNode notABinarySearchTree = tree;
+// 		Validate BST
+//		ValidateBST validateBST = new ValidateBST();
+//		BinaryNode notABinarySearchTree = tree;
+//		
+//		while (tree.getRight() != null) {
+//			tree = tree.getRight();
+//		}
 		
-		while (tree.getRight() != null) {
-			tree = tree.getRight();
-		}
-		
-		tree.setLeft(new BinaryNode(13));
+//		tree.setLeft(new BinaryNode(13));
 //		tree = tree.getRight();
 //		tree.setRight(new BinaryNode(55));
 		
-		Utils.printBinaryTree(notABinarySearchTree, "", "─");
-		boolean result = validateBST.validate(notABinarySearchTree);
-		System.out.println(result);
+		MinimalTree minimalTree = new MinimalTree();
+		BinaryNodeWithParent tree = minimalTree.createMinimalTreeWithParent(numberArray);
+		Utils.printBinaryTreeWithParent(tree, "", "─");
+
+		Successor successor = new Successor();
+		int result = successor.getSuccessor(tree, 10);
+		System.out.println(result == Integer.MIN_VALUE ? "notFound" : result);
+		
+//		boolean result = validateBST.validate(notABinarySearchTree);
+//		System.out.println(result);
+		
+//		Get Successor
+//		BinaryNodeWithParent node 1 
+		
 
 	}
 }
