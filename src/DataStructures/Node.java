@@ -3,8 +3,7 @@ package DataStructures;
 import java.util.ArrayList;
 
 public class Node {
-	// String name;
-	//	int data;
+	String name;
 	Boolean visited;
 	ArrayList<Node> neighbours;
 
@@ -12,23 +11,24 @@ public class Node {
 		visited = false;
 		neighbours = new ArrayList<Node>();
 	}
-	
-//	public Node(int data) {
-//		visited = false;
-//		neighbours = new ArrayList<Node>();
-//	}
+
+	public Node(String name) {
+		this.name = name;
+		visited = false;
+		neighbours = new ArrayList<Node>();
+	}
 
 	public ArrayList<Node> getNeighbours() {
 		return neighbours;
 	}
 
-	// public String getName() {
-	// return name;
-	// }
-	//
-	// public void setName(String name) {
-	// this.name = name;
-	// }
+	public String getName() {
+		return name;
+	}
+
+	public void setName(String name) {
+		this.name = name;
+	 }
 
 	public Boolean getVisited() {
 		return visited;

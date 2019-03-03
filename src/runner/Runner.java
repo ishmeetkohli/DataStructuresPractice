@@ -1,11 +1,11 @@
 package runner;
 
-import DataStructures.BinaryNode;
-import DataStructures.BinaryNodeWithParent;
-import problems.MinimalTree;
-import problems.Successor;
-import problems.ValidateBST;
-import utils.Utils;
+import DataStructures.Animal;
+import problems.AnimalShelter;
+import problems.QueueViaStacks;
+import problems.SetOfStacks;
+import problems.SortStack;
+import sorting.MergeSort;
 
 public class Runner {
 	public static void main(String[] args) {
@@ -109,21 +109,21 @@ public class Runner {
 		// System.out.println(result);
 
 		// Minimal Tree
-		int n = 15;
-		int[] numberArray = new int[n];
-		for (int i = 0; i < n; i++) {
-			numberArray[i] = i;
-		}
+		// int n = 15;
+		// int[] numberArray = new int[n];
+		// for (int i = 0; i < n; i++) {
+		// numberArray[i] = i;
+		// }
 
-//		MinimalTree minimalTree = new MinimalTree();
-//		BinaryNode tree = minimalTree.createMinimalTree(numberArray);
+		// MinimalTree minimalTree = new MinimalTree();
+		// BinaryNode problems.tree = minimalTree.createMinimalTree(numberArray);
 
-		// Utils.printBinaryTree(tree, "", "─");
+		// Utils.printBinaryTree(problems.tree, "", "─");
 
 		// Lists of depths
 
 		// ListOfDepths listOfDepths = new ListOfDepths();
-		// ArrayList<MyLinkedList> lists = listOfDepths.getListOfDepths(tree);
+		// ArrayList<MyLinkedList> lists = listOfDepths.getListOfDepths(problems.tree);
 		//
 		// for(MyLinkedList list : lists) {
 		// System.out.println();
@@ -133,46 +133,145 @@ public class Runner {
 		// Check Balanced
 		// CheckBalanced checkBalanced = new CheckBalanced();
 		//
-		// BinaryNode unbalancedTree = tree;
-		// while(tree.getRight() != null) {
-		// tree = tree.getRight();
+		// BinaryNode unbalancedTree = problems.tree;
+		// while(problems.tree.getRight() != null) {
+		// problems.tree = problems.tree.getRight();
 		// }
 		//
-		// tree.setRight(new BinaryNode(45));
-		// tree = tree.getRight();
-		// tree.setRight(new BinaryNode(55));
+		// problems.tree.setRight(new BinaryNode(45));
+		// problems.tree = problems.tree.getRight();
+		// problems.tree.setRight(new BinaryNode(55));
 		//
 		// Utils.printBinaryTree(unbalancedTree, "", "─");
 
 		// boolean result = checkBalanced.isBalanced(unbalancedTree);
 		// System.out.println(result);
 
-// 		Validate BST
-//		ValidateBST validateBST = new ValidateBST();
-//		BinaryNode notABinarySearchTree = tree;
-//		
-//		while (tree.getRight() != null) {
-//			tree = tree.getRight();
-//		}
-		
-//		tree.setLeft(new BinaryNode(13));
-//		tree = tree.getRight();
-//		tree.setRight(new BinaryNode(55));
-		
-		MinimalTree minimalTree = new MinimalTree();
-		BinaryNodeWithParent tree = minimalTree.createMinimalTreeWithParent(numberArray);
-		Utils.printBinaryTreeWithParent(tree, "", "─");
+		// Validate BST
+		// ValidateBST validateBST = new ValidateBST();
+		// BinaryNode notABinarySearchTree = problems.tree;
+		//
+		// while (problems.tree.getRight() != null) {
+		// problems.tree = problems.tree.getRight();
+		// }
 
-		Successor successor = new Successor();
-		int result = successor.getSuccessor(tree, 10);
-		System.out.println(result == Integer.MIN_VALUE ? "notFound" : result);
-		
-//		boolean result = validateBST.validate(notABinarySearchTree);
-//		System.out.println(result);
-		
-//		Get Successor
-//		BinaryNodeWithParent node 1 
-		
+		// problems.tree.setLeft(new BinaryNode(13));
+		// problems.tree = problems.tree.getRight();
+		// problems.tree.setRight(new BinaryNode(55));
 
+		// MinimalTree minimalTree = new MinimalTree();
+		// BinaryNodeWithParent problems.tree =
+		// minimalTree.createMinimalTreeWithParent(numberArray);
+		// Utils.printBinaryTreeWithParent(problems.tree, "", "─");
+		//
+		// Successor successor = new Successor();
+		// int result = successor.getSuccessor(problems.tree, 10);
+		// System.out.println(result == Integer.MIN_VALUE ? "notFound" :
+		// result);
+
+		// boolean result = validateBST.validate(notABinarySearchTree);
+		// System.out.println(result);
+
+		// Get Successor
+		// BinaryNodeWithParent node 1
+
+		// BuildOrder
+		// BuildOrder buildOrder = new BuildOrder();
+		// List<String> projectList = Arrays.asList("a","b","c","d","e","f");
+		//
+		// List<List<String>> dependencyList = Arrays.asList(
+		// Arrays.asList("a","d"),
+		// Arrays.asList("f","b"),
+		// Arrays.asList("b","d"),
+		// Arrays.asList("f","a"),
+		// Arrays.asList("d","c"));
+		//
+		// List<String> buildOrderList = buildOrder.findBuildOrder(projectList,
+		// dependencyList);
+		// System.out.println(buildOrderList);
+
+		// Stack of Plates
+
+		// SetOfStacks setOfStacks = new SetOfStacks(5);
+		//
+		// setOfStacks.push(1);
+		// setOfStacks.push(2);
+		// setOfStacks.push(3);
+		// setOfStacks.push(4);
+		// setOfStacks.push(5);
+		//
+		// setOfStacks.push(6);
+		// setOfStacks.push(7);
+		// setOfStacks.push(8);
+		// setOfStacks.push(9);
+		// setOfStacks.push(10);
+		//
+		// setOfStacks.push(11);
+		//
+		// System.out.println(setOfStacks.popAt(1));
+		// System.out.println(setOfStacks.popAt(1));
+		// System.out.println(setOfStacks.popAt(1));
+		// System.out.println(setOfStacks.popAt(1));
+		// System.out.println(setOfStacks.popAt(1));
+		// System.out.println(setOfStacks.pop());
+		// System.out.println(setOfStacks.pop());
+
+		// Queue via Stacks
+
+		// QueueViaStacks queueViaStacks = new QueueViaStacks();
+		// queueViaStacks.insert(1);
+		// queueViaStacks.insert(2);
+		// queueViaStacks.insert(3);
+		// queueViaStacks.insert(4);
+		// queueViaStacks.insert(5);
+		// System.out.println(queueViaStacks.delete());
+		// queueViaStacks.insert(6);
+		// System.out.println(queueViaStacks.delete());
+		// System.out.println(queueViaStacks.delete());
+		// System.out.println(queueViaStacks.delete());
+		// System.out.println(queueViaStacks.delete());
+		// System.out.println(queueViaStacks.delete());
+
+		// Sort Stack
+		// SortStack sortStack = new SortStack();
+		//
+		// sortStack.push(4);
+		// sortStack.push(1);
+		// sortStack.push(5);
+		// sortStack.push(2);
+		// sortStack.push(3);
+		//
+		// System.out.println(sortStack.pop());
+		// System.out.println(sortStack.pop());
+		// System.out.println(sortStack.pop());
+		// System.out.println(sortStack.pop());
+		// System.out.println(sortStack.pop());
+		// System.out.println(sortStack.pop());
+
+		// Animal Shelter
+
+		// AnimalShelter animalShelter = new AnimalShelter();
+		// animalShelter.enqueue(new Animal("apple", Animal.CAT));
+		// animalShelter.enqueue(new Animal("ball", Animal.DOG));
+		// animalShelter.enqueue(new Animal("cat", Animal.CAT));
+		// animalShelter.enqueue(new Animal("dog", Animal.DOG));
+		// animalShelter.enqueue(new Animal("elephant", Animal.DOG));
+		// animalShelter.enqueue(new Animal("fridge", Animal.CAT));
+		//
+		// System.out.println(animalShelter.dequeueDog().getName());
+		// System.out.println(animalShelter.dequeueAny().getName());
+		// System.out.println(animalShelter.dequeueAny().getName());
+		// System.out.println(animalShelter.dequeueAny().getName());
+		// System.out.println(animalShelter.dequeueAny().getName());
+
+		// Merge Sort
+		MergeSort mergeSort = new MergeSort();
+		int[] array = { 9, 5, 1, 4, 8, 10, 2, 7, 13 };
+		mergeSort.mergeSort(array);
+		int i;
+		for (i = 0; i < array.length - 1; i++) {
+			System.out.print(array[i] + ",");
+		}
+		System.out.println(array[i]);
 	}
 }

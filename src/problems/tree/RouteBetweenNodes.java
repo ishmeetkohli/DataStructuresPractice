@@ -1,4 +1,4 @@
-package problems;
+package problems.tree;
 
 import java.util.Queue;
 import java.util.concurrent.ConcurrentLinkedQueue;

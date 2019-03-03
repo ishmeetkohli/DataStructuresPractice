@@ -1,4 +1,4 @@
-package problems;
+package problems.tree;
 
 import DataStructures.BinaryNode;
 import DataStructures.BinaryNodeWithParent;
